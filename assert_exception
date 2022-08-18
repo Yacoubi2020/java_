@@ -1,0 +1,26 @@
+package test;
+
+import java.util.Scanner;
+
+public class newJz  {
+	//Exception propagator 
+	public static int values ;
+	public  void f(int val) throws Myexception  {
+		         this.values=val;
+		
+				assert val<100;
+				throw new Myexception("over");
+		
+	}
+	public static void main(String [] args ) {
+		Scanner scn=new Scanner(System.in);
+		newJz o =new newJz();
+	try{
+		o.f(119);		
+	}
+	catch(Myexception e ) {
+		values=scn.nextInt();
+		if (values>100) {
+			System.out.print(e.getMessage());	
+		}
+		System.out.print("good");}}}	
