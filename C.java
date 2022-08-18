@@ -1,16 +1,12 @@
 package test;
 
 public class C extends A{
-	private String dist ;
+	
 	public C() {
-		super("Linux","NONE");
+		super("C");
 	}
-	public C(String ver,String dis) {
-		super("Linux",ver);
-		this.dist=dis;
+	public void show() {
+		
 	}
-	public void PrintOS() {
-		super.PrintOS();
-		System.out.print(" dist "+this.dist);
-	}
+
 }
