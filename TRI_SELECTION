@@ -1,0 +1,42 @@
+package javaLearn;
+public class Main {
+	     public static void tri_selection(int[] tab)
+	     {
+	         
+	    	 for(int i=0;i<tab.length;i++) {
+	    		 int index=i;
+	    		 for(int j=i+1;j<tab.length;j++) {
+	    			 
+	    			 if(tab[j]<tab[index])
+	    				 index=j;
+	    		 }
+	    		 int min=tab[index];
+	    		 tab[index]=tab[i];
+	    		 tab[i]=min ;
+	    	 
+	    	 }
+	     }
+	     public static void display(int[] tab) {
+	    	 System.out.println("");
+	    	 tri_selection(tab);
+	    	 for (int v:tab) {
+	    		 System.out.print(" "+v);
+	    	 }
+	    	
+	     }
+
+	    
+	     public static void main(String a[])
+	     {	
+	    	int [] tab= {2,1,4,0}; 
+	    	System.out.print("avant trie ***********");
+	    	 System.out.println("");
+	        for(int i:tab) {
+	        	System.out.print(" "+i);
+	        }
+	        System.out.println("");
+	        System.out.print("apres  trie ***********");
+	    
+	    	display(tab);
+	     } 
+	}
