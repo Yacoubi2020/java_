@@ -1,0 +1,52 @@
+package javaLearn;
+
+import java.util.Scanner;
+
+public class Livre {
+ 
+    int id=0;
+    String Titre;
+    String Auteur;
+    float Prix;
+	public Livre(int ID,String Titre,String Auteur,float Prix) {
+		this.id=ID;
+		this.Titre=Titre;
+		this.Auteur=Auteur;
+		
+		this.Prix=Prix;
+	}
+	public String  toString() {
+	 
+		System.out.println("id="+this.id);
+		System.out.println("Title="+this.Titre);
+		System.out.println("Auteur="+this.Auteur);
+		System.out.println("Prix="+this.Prix);
+		return "";	
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	    int i=0;
+	 
+	    try {
+	    
+	    	while(i>=0) {
+	    		
+	    
+	        System.out.println("Enter information LIvre pour id="+i);
+	    	Scanner p=new Scanner(System.in);
+	    	String TL=p.nextLine();
+	    	String AU=p.next();
+	        String PX=p.next();
+	        float prix=Float.parseFloat(PX);
+	    	new Livre(i++,TL,AU,prix).toString();
+	    	
+	    	}
+	    }
+	    catch(Exception e ) {
+	    	
+	    e.printStackTrace();
+	    }
+	}
+
+}
