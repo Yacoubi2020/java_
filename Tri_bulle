@@ -1,0 +1,32 @@
+package javaLearn;
+
+public class tri_bulle {
+
+	public static  void Tri_bulle(int [] tab){
+		int taille=tab.length;
+		for(int i=0;i<tab.length;i++) {
+			for(int j=1 ;j<taille-i;j++) {
+				if(tab[j-1]>tab[j]) {
+					int c =tab[j-1];
+					tab[j-1]=tab[j];
+					tab[j]=c;
+				}
+			}
+		}
+	}
+	
+	
+	
+	public static void display(int [] tab ) {
+		Tri_bulle(tab);
+		for(int l:tab) {
+			System.out.print(l);
+		}
+	}
+	
+	
+	public static void main(String args[]) {
+		int tab[]= {1,3,-4,-43};
+		display(tab);
+	}
+}
