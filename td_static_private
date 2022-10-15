@@ -1,0 +1,36 @@
+package javaLearn;
+
+public class pl {
+	    private int x;
+		private int y;
+
+static public void main(String args[]){
+	pl c=new pl();
+	c.setX(10);
+
+	 
+	 System.out.println("Avant modif, x = " +c.getX());
+	 c.modifVal(100);
+	 System.out.println("Apres modif, x = " +c.getX());
+	 int [] t = {2, 3};
+	 System.out.println("Avant modif, t[0] = " + t[0]);
+	 t=modifObj(t);
+	 System.out.println("Apres modif, t[0] = " + t[2]);
+	 }
+	 public static int [] modifObj(int p[]) {
+	
+	//p[0] = p[0] + 200; // Objet référencé p est modifié
+		 p=new int [] {200,300,400};
+	     return p;
+	 }
+	 public  void modifVal(int x) {
+	  this.x =x + 200; // paramètre x modifié
+	  System.out.print(this.x);
+	  }
+	 public int getX() {
+		 return this.x;
+	 }
+	 public void  setX(int c ) {
+		 this.x=c;
+	 }
+}
